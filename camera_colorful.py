@@ -4,6 +4,10 @@ import cv2
 # 選擇第二隻攝影機
 cap = cv2.VideoCapture(0)
 
+# 設定解析度
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
+
 while(True):
   # 從攝影機擷取一張影像
   ret, frame = cap.read()
